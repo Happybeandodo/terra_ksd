@@ -1,0 +1,60 @@
+#1 가용영역 a에 public subnet
+resource "aws_subnet" "jiwon_puba" {
+  vpc_id            = aws_vpc.jiwon_vpc.id
+  cidr_block        = "10.0.0.0/24"
+  availability_zone = "ap-northeast-2a"
+  tags = {
+    "Name" = "jiwon-puba"
+  }
+
+}
+#2 가용영역 c에 public subnet
+resource "aws_subnet" "jiwon_pubc" {
+  vpc_id            = aws_vpc.jiwon_vpc.id
+  cidr_block        = "10.0.1.0/24"
+  availability_zone = "ap-northeast-2c"
+  tags = {
+    "Name" = "jiwon-pubc"
+  }
+
+}
+#3 가용영역 a에 private subnet
+resource "aws_subnet" "jiwon_pria" {
+  vpc_id            = aws_vpc.jiwon_vpc.id
+  cidr_block        = "10.0.2.0/24"
+  availability_zone = "ap-northeast-2a"
+  tags = {
+    "Name" = "jiwon-pria"
+  }
+
+}
+#4 가용영역 c에 private subnet
+resource "aws_subnet" "jiwon_pric" {
+  vpc_id            = aws_vpc.jiwon_vpc.id
+  cidr_block        = "10.0.3.0/24"
+  availability_zone = "ap-northeast-2c"
+  tags = {
+    "Name" = "jiwon-pric"
+  }
+
+}
+#5 가용영역 a에 db subnet
+resource "aws_subnet" "jiwon_pridba" {
+  vpc_id            = aws_vpc.jiwon_vpc.id
+  cidr_block        = "10.0.4.0/24"
+  availability_zone = "ap-northeast-2a"
+  tags = {
+    "Name" = "jiwon-pridba"
+  }
+
+}
+#6 가용영역 c에 db subnet
+resource "aws_subnet" "jiwon_pridbc" {
+  vpc_id            = aws_vpc.jiwon_vpc.id
+  cidr_block        = "10.0.5.0/24"
+  availability_zone = "ap-northeast-2c"
+  tags = {
+    "Name" = "jiwon-pridbc"
+  }
+
+}

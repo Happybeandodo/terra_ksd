@@ -1,0 +1,6 @@
+# 꼭 필요하지 않은 구문
+resource "aws_lb_target_group_attachment" "jiwon_albtagtt" {
+  target_group_arn = aws_lb_target_group.jiwon_albtg.arn
+  target_id        = aws_instance.jiwon_web.id  
+  port             = 80
+}

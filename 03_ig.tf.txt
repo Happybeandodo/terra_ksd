@@ -1,0 +1,8 @@
+resource "aws_internet_gateway" "jiwon_ig" {
+    vpc_id = aws_vpc.jiwon_vpc.id
+
+    tags = {
+      Name = "jiwon-ig"
+    }
+  
+}

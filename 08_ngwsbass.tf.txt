@@ -1,0 +1,16 @@
+resource "aws_route_table_association" "jiwon_ngwass_pria" {
+    subnet_id = aws_subnet.jiwon_pria.id
+    route_table_id = aws_route_table.jiwon_ngwrt.id
+}
+resource "aws_route_table_association" "jiwon_ngwass_pric" {
+    subnet_id = aws_subnet.jiwon_pric.id
+    route_table_id = aws_route_table.jiwon_ngwrt.id
+}
+resource "aws_route_table_association" "jiwon_ngwass_pridba" {
+    subnet_id = aws_subnet.jiwon_pridba.id
+    route_table_id = aws_route_table.jiwon_ngwrt.id
+}
+resource "aws_route_table_association" "jiwon_ngwass_pridbc" {
+    subnet_id = aws_subnet.jiwon_pridbc.id
+    route_table_id =  aws_route_table.jiwon_ngwrt.id
+}

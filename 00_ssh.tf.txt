@@ -1,0 +1,4 @@
+resource "aws_key_pair" "jiwon-key" {
+    key_name = "jiwon1-key"
+    public_key = file("../../.ssh/jiwon-key.pub")
+  }

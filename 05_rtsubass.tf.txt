@@ -1,0 +1,8 @@
+resource "aws_route_table_association" "jiwon_puba" {
+    subnet_id = aws_subnet.jiwon_pub[0].id
+    route_table_id = aws_route_table.jiwon_rt.id
+}
+resource "aws_route_table_association" "jiwon_pubc" {
+    subnet_id = aws_subnet.jiwon_pubc.id
+    route_table_id = aws_route_table.jiwon_rt.id
+}

@@ -1,0 +1,11 @@
+resource "aws_eip" "jiwon_ngw_ip" {
+  vpc = true
+}
+
+resource "aws_nat_gateway" "jiwon_ngw" {
+  allocation_id = aws_eip.jiwon_ngw_ip.id
+  subnet_id     = aws_subnet.jiwon_puba.id
+  tags = {
+    "Name" = "jiwon-ngw"
+  }
+}

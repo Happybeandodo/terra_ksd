@@ -1,0 +1,14 @@
+resource "aws_lb" "jiwon_alb" {
+  name               = "jiwon-alb"
+  internal           = false
+  load_balancer_type = "application"
+  security_groups    = [aws_security_group.jiwon_sg.id]
+  subnets            = [aws_subnet.jiwon_puba.id, aws_subnet.jiwon_pubc.id]
+  tags = {
+    "Name" = "jiwon-alb"
+  }
+}
+
+output "dns_name" {
+  value = aws_lb.jiwon_alb.dns_name
+}

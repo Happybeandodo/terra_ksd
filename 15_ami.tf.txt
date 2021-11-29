@@ -1,0 +1,7 @@
+resource "aws_ami_from_instance" "jiwon_ami" {
+  name               = "jiwon-ami"
+  source_instance_id = aws_instance.jiwon_web.id
+  depends_on = [
+    aws_instance.jiwon_web
+  ]
+}
